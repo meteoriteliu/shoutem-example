@@ -1,4 +1,4 @@
-import Exponent from 'exponent';
+import { Expo, Font } from 'expo';
 import React from 'react';
 import {
   StyleSheet,
@@ -7,7 +7,6 @@ import {
   View,
 } from 'react-native';
 
-import { Font, Components } from 'exponent';
 import { Examples } from '@shoutem/ui';
 
 console.disableYellowBox = true;
@@ -37,7 +36,7 @@ class App extends React.Component {
 
   render() {
     if (!this.state.fontsAreLoaded) {
-      return <Components.AppLoading />;
+      return <Expo.AppLoading />;
     }
 
     return (
@@ -49,4 +48,4 @@ class App extends React.Component {
   }
 }
 
-Exponent.registerRootComponent(App);
+Expo.registerRootComponent(App);
